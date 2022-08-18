@@ -20,7 +20,7 @@ node{
    stage('Docker Image Push'){
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
    sh "docker login -u radhajayachandran123 -p ${dockerPassword}"
-   sh "docker tag radha1990 radhajayachandran123/radha1990:radha1990"
+   #sh "docker tag radha1990 radhajayachandran123/radha1990:radha1990"
     }
    sh "docker push radhajayachandran123/radha1990:radha1990"
    }
